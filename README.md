@@ -11,7 +11,7 @@
 Create a portfolio, using your React to showcase skills
 
 # Installation
-
+In terminal ## `npm start`
 # Screenshots
 
 Repo: https://github.com/aashpaash <br>
