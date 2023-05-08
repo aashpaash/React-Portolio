@@ -1,4 +1,4 @@
-import Projects from "./Projects";
+import Projects from '../components/pages/Projects';
 
 const ProjectCard = ({ projects }) => {
     const { title, description, deployedLink, image, githubLink } = Projects;

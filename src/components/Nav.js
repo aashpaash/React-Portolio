@@ -1,6 +1,8 @@
 import { Navbar, Nav, Container } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap';
 import React from 'react';
-import ReactDOM from 'react-dom';
+
 import 'bootstrap/js/dist/dropdown';
 
 const Navigation = () => {
@@ -10,7 +12,6 @@ const Navigation = () => {
                 <Navbar.Toggle aria-controls='responsive-navbar-nav'/>
                 <Navbar.Collapse id='responsive-navbar-nav'>
                     <Nav>
-                        <Navbar.Link href='/'>Home</Navbar.Link>
                         <Navbar.Link href='/'>About</Navbar.Link>
                         <Navbar.Link href='/'>Projects</Navbar.Link>
                         <Navbar.Link href='/'>Contact</Navbar.Link>

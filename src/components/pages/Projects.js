@@ -1,7 +1,7 @@
 import React from 'react';
 import ProjectsCard from '../ProjectsCard';
-import WeatherApp from '../assets/projects/Server-Side-Screenshot.png';
-import MeetIO from '../assets/projects/meetio.png';
+import WeatherApp from '../../assets/projects/weather.png';
+import MeetIO from '../../assets/projects/meetio.png';
 
 
 const Projects = () => {
