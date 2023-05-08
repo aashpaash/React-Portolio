@@ -1,40 +1,30 @@
 import React, { useState } from 'react';
-import Header from './components/Header';
-import Section from './components/Section';
+import {Route, Switch } from 'react-router-dom'
+import 'bootstrap';
+import Home from './components/pages/Home';
 import About from './components/pages/About';
 import Contact from './components/pages/Contact';
-import Portfolio from './components/pages/Portfolio';
-import Resume from './components/pages/Resume';
-import Footer from './components/Footer';
-import AppStyle from './styles/App.css';
+import Projects from './components/pages/Projects';
+import Navigation from './components/Nav';
+
 
 
 function App() {
-    const [currentPage, setCurrentPage] = useState('about');
-  
-    let pageContent;
-  
-    if (currentPage === 'about') {
-      pageContent = <About />;
-    } else if (currentPage === 'contact') {
-      pageContent = <Contact />;
-    } else if (currentPage === 'portfolio') {
-      pageContent = <Portfolio />;
-    } else if (currentPage === 'resume') {
-      pageContent = <Resume />;
-    }
-  
-    const changePage = (page) => {
-      setCurrentPage(page);
-    };
-  
-    return (
-      <div>
-        <Header currentPage={currentPage} changePage={changePage} />
-        <Section pageContent={pageContent} />
-        <Footer />
-      </div>
-    );
-  }
+  return (
+    <div className="App">
+      <Navigation/>
+        <div>
+          <Switch>
+            <Route path='/about'  component={About}/>
+            <Route path='/projects' component={Projects}/>
+            <Route path='/contact' component={Contact}/>
+            <Route path='/' component={Home}/>
+          </Switch>
+        </div>
 
-  export default App;
+    </div>
+  )
+  
+};
+
+export default App;
